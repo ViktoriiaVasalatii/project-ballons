@@ -10,4 +10,10 @@
 
 .section-tour {
   padding-top: 10rem;
+  margin-bottom: 8rem;
+}
+
+.section-feedback {
+  position: relative;
+  padding: 8rem;
 }
