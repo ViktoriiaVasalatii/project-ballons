@@ -1,0 +1,35 @@
+.card-tour {
+  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+
+.card-tour__side {
+  height: 50rem;
+  transition: 1s all ease-out;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card-tour__side_front {
+  background-color: yellow;
+}
+
+.card-tour__side_back {
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
+  background-color: green;
+  transform: rotateY(180deg);
+}
+
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(180deg);
+}
+
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
