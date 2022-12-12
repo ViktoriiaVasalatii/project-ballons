@@ -174,7 +174,7 @@ body {
 }
 
 /* line 2, ../../Ballons111/sass/components/_button.sass */
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   color: #777777;
@@ -185,27 +185,28 @@ body {
   transition: all .3s;
   position: relative;
   font-size: 2rem;
+  border: none;
 }
 
-/* line 10, ../../Ballons111/sass/components/_button.sass */
+/* line 11, ../../Ballons111/sass/components/_button.sass */
 .btn:hover {
   transform: translateY(-0.4rem);
   box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
-/* line 13, ../../Ballons111/sass/components/_button.sass */
+/* line 14, ../../Ballons111/sass/components/_button.sass */
 .btn:hover::after {
   opacity: 0;
   transform: scaleX(1.5) scaleY(1.7);
 }
 
-/* line 16, ../../Ballons111/sass/components/_button.sass */
+/* line 17, ../../Ballons111/sass/components/_button.sass */
 .btn:active {
   transform: translateY(-0.2rem);
   box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
-/* line 19, ../../Ballons111/sass/components/_button.sass */
+/* line 20, ../../Ballons111/sass/components/_button.sass */
 .btn::after {
   content: "";
   background: #ffffff;
@@ -220,10 +221,21 @@ body {
   transition: all .4s;
 }
 
-/* line 31, ../../Ballons111/sass/components/_button.sass */
+/* line 32, ../../Ballons111/sass/components/_button.sass */
 .btn_animate {
   animation: btnToup .5s ease-out .7s;
   animation-fill-mode: backwards;
+}
+
+/* line 36, ../../Ballons111/sass/components/_button.sass */
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background: #A14F03;
+  color: #ffffff;
+}
+
+/* line 40, ../../Ballons111/sass/components/_button.sass */
+.btn_brown::after {
+  background: #A14F03;
 }
 
 /* line 2, ../../Ballons111/sass/components/_button-text.sass */
@@ -544,6 +556,126 @@ body {
   z-index: -1;
 }
 
+/* line 1, ../../Ballons111/sass/components/_form.sass */
+.book {
+  height: 50rem;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 57%, rgba(186, 133, 80, 0.8) 57%, rgba(161, 79, 3, 0.8) 100%), url("../img/bg-form.jpg") center/cover no-repeat;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+}
+
+/* line 8, ../../Ballons111/sass/components/_form.sass */
+.form {
+  width: 60%;
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+
+/* line 12, ../../Ballons111/sass/components/_form.sass */
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* line 14, ../../Ballons111/sass/components/_form.sass */
+.form__group:nth-child(4) {
+  margin-bottom: 4rem;
+}
+
+/* line 16, ../../Ballons111/sass/components/_form.sass */
+.form__input {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 400;
+  color: #000000;
+  padding: 2rem 0rem 2rem 2rem;
+  background-color: #ffffff;
+  border: none;
+  border-bottom: .2rem solid transperent;
+  border-radius: .5rem;
+  width: 75%;
+}
+
+/* line 27, ../../Ballons111/sass/components/_form.sass */
+.form__input:focus {
+  outline: none;
+  border-bottom: .2rem solid #66D763;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+/* line 31, ../../Ballons111/sass/components/_form.sass */
+.form__input:focus:invalid {
+  border-bottom: .2rem solid #D76363;
+}
+
+/* line 33, ../../Ballons111/sass/components/_form.sass */
+.form__label {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  transition: .2s all;
+}
+
+/* line 41, ../../Ballons111/sass/components/_form.sass */
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: none;
+  transform: translateY(-3rem);
+}
+
+/* line 46, ../../Ballons111/sass/components/_form.sass */
+.form__group-radio {
+  width: 40%;
+  display: inline-block;
+}
+
+/* line 50, ../../Ballons111/sass/components/_form.sass */
+.form__input-radio {
+  display: none;
+}
+
+/* line 53, ../../Ballons111/sass/components/_form.sass */
+.form__label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+
+/* line 57, ../../Ballons111/sass/components/_form.sass */
+.form__button-radio {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #A14F03;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+}
+
+/* line 66, ../../Ballons111/sass/components/_form.sass */
+.form__button-radio::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background: #A14F03;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .2s all;
+}
+
+/* line 79, ../../Ballons111/sass/components/_form.sass */
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
+}
+
 /* line 1, ../../Ballons111/sass/layout/_header.sass */
 .header {
   position: relative;
@@ -629,6 +761,207 @@ body {
   margin-right: 6rem;
 }
 
+/* line 1, ../../Ballons111/sass/layout/_footer.sass */
+.footer {
+  padding: 8rem;
+  background: #333;
+}
+
+/* line 4, ../../Ballons111/sass/layout/_footer.sass */
+.footer__logo {
+  width: 12rem;
+}
+
+/* line 6, ../../Ballons111/sass/layout/_footer.sass */
+.footer__list {
+  list-style: none;
+  text-align: center;
+}
+
+/* line 9, ../../Ballons111/sass/layout/_footer.sass */
+.footer__item {
+  display: inline-block;
+}
+
+/* line 11, ../../Ballons111/sass/layout/_footer.sass */
+.footer__item:not(:last-child) {
+  margin-right: 5rem;
+}
+
+/* line 14, ../../Ballons111/sass/layout/_footer.sass */
+.footer__link:link, .footer__link:visited {
+  color: #777777;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 300;
+  display: inline-block;
+  transition: all .3s;
+}
+
+/* line 24, ../../Ballons111/sass/layout/_footer.sass */
+.footer__link:hover {
+  transform: rotate(5deg) scale(1.2);
+  color: #A14F03;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+/* line 2, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__toggle {
+  display: none;
+}
+
+/* line 4, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__button {
+  background: #ffffff;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 10rem;
+  right: 10rem;
+  z-index: 20;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 15, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__background {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: radial-gradient(#BA8554, #A14F03);
+  position: fixed;
+  right: 11rem;
+  top: 11rem;
+  z-index: 10;
+  transition: all .7s;
+}
+
+/* line 25, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 15;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+/* line 35, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  width: 100%;
+}
+
+/* line 42, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__item {
+  text-align: center;
+}
+
+/* line 44, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__item:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+/* line 47, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__link:link, .navigation__link:visited {
+  font-size: 4rem;
+  color: #ffffff;
+  letter-spacing: .5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, transparent 0%, transparent 50%, #ffffff 50%);
+  background-size: 220%;
+  padding: 1rem 2rem;
+  transition: all .4s;
+  display: inline-block;
+}
+
+/* line 58, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #A14F03;
+  transform: translateX(1rem);
+}
+
+/* line 62, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__toggle:checked ~ .navigation__background {
+  transform: scale(80);
+}
+
+/* line 64, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__toggle:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1;
+}
+
+/* line 68, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__icon {
+  position: relative;
+  margin-top: 37px;
+}
+
+/* line 71, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 30px;
+  height: 2px;
+  background: #000000;
+  display: inline-block;
+}
+
+/* line 78, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all .2s;
+}
+
+/* line 84, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__icon::before {
+  top: -8px;
+}
+
+/* line 86, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__icon::after {
+  top: 8px;
+}
+
+/* line 89, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__button:hover .navigation__icon::before {
+  top: -10px;
+}
+
+/* line 91, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__button:hover .navigation__icon::after {
+  top: 10px;
+}
+
+/* line 94, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__toggle:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+
+/* line 96, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__toggle:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+/* line 99, ../../Ballons111/sass/layout/_navigation.sass */
+.navigation__toggle:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
 /* line 1, ../../Ballons111/sass/pages/_home.sass */
 .section-about {
   padding-top: 8rem;
@@ -651,6 +984,12 @@ body {
 .section-feedback {
   position: relative;
   padding: 8rem;
+}
+
+/* line 18, ../../Ballons111/sass/pages/_home.sass */
+.section-book {
+  padding: 10rem;
+  background: linear-gradient(90deg, #BA8554, #A14F03);
 }
 
 /*# sourceMappingURL=style.css.map */

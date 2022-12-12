@@ -1,0 +1,6 @@
+.navigation__background {
+  width: 7 rem;
+  height: 7 rem;
+  border-radius: 50%;
+  background: radial-gradient();
+}
